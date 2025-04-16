@@ -1,0 +1,36 @@
+{
+  "name": "books-catalogue",
+  "version": "1.0.0",
+  "description": "An index page that showcases a collection of books, allows browsing the collection using pagination, and filtering down the collection based on different criteria such as authors, subjects, language, etc.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --trace-warnings index.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/preethiramiah/books-catalogue.git"
+  },
+  "keywords": [
+    "books",
+    "catalogue",
+    "server-side",
+    "rendering",
+    "nodejs",
+    "express",
+    "ejs"
+  ],
+  "author": "Preethi Ramiah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/preethiramiah/books-catalogue/issues"
+  },
+  "homepage": "https://github.com/preethiramiah/books-catalogue#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
