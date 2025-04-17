@@ -1,5 +1,7 @@
 <%- include('../partials/header') %>
 <main>
-  <p>Page under construction</p>
+  <% books?.forEach(book => { %>
+    <p><%= book.title %></p>
+  <% }) %>
 </main>
 <%- include('../partials/footer') %>
