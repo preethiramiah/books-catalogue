@@ -3,7 +3,8 @@ const { COUNT_PER_PAGE } = require('../constants/books')
 
 async function renderBooksList (req, res) {
   try {
-    const books = await getBooks()
+    const currentPage = req.query.page && !isNaN(req.query.page) ? Number(req.query.page) : null
+    const books = await getBooks(currentPage)
     const { results, count, next, previous } = books || {}
     res.render(
       'pages/index',
@@ -13,6 +14,7 @@ async function renderBooksList (req, res) {
         totalPages: Math.ceil(count / COUNT_PER_PAGE),
         next,
         previous,
+        currentPage: currentPage || null,
       }
     )
   } catch (error) {

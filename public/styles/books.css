@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-container {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}

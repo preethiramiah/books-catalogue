@@ -1,7 +1,7 @@
-const GUTNEDEX_API = 'https://gutendex.com/books/'
+const GUTENDEX_API = 'https://gutendex.com/books/'
 
-async function getBooks (url = GUTNEDEX_API) {
-  const res = await fetch(url)
+async function getBooks (currentPage) {
+  const res = await fetch(currentPage ? `${GUTENDEX_API}?page=${currentPage}` : GUTENDEX_API)
   if (!res.ok) {
     throw new Error('Error in getBooks: ', `${res.status}: ${res.statusText}` )
   }
