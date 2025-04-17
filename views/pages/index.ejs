@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
 <main>
+  <%- include('../partials/search', { query }) %>
   <% books?.forEach(book => { %>
     <p><%= book.title %></p>
   <% }) %>

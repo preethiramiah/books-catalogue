@@ -1,15 +1,17 @@
-<div class="pagination-container">
-  <a class="<%= !currentPage || currentPage === 1 ? 'disabled' : '' %>" href="?page=1"><<</a>
-  <a class="<%= previous ? '' : 'disabled' %>" href="<%= currentPage > 1 ? `?page=${currentPage - 1}` : '/' %>"><</a>
-  <% let startIndex = currentPage - 4 < 1 ? 1 : currentPage - 4 %>
-  <% for(let i = startIndex; i < startIndex + 10; i++) { %>
-    <% if (i <= totalPages) { %>
-      <a href="?page=<%= i %>"><%= i %></a>
+<% if (totalPages >= 1) { %>
+  <div class="pagination-container">
+    <a class="<%= !currentPage || currentPage === 1 ? 'disabled' : '' %>" href="?page=1"><<</a>
+    <a class="<%= previous ? '' : 'disabled' %>" href="<%= currentPage > 1 ? `?page=${currentPage - 1}` : '/' %>"><</a>
+    <% let startIndex = currentPage - 4 < 1 ? 1 : currentPage - 4 %>
+    <% for(let i = startIndex; i < startIndex + 10; i++) { %>
+      <% if (i <= totalPages) { %>
+        <a href="?page=<%= i %>"><%= i %></a>
+      <% } %>
     <% } %>
-  <% } %>
-  <a class="<%= next ? '' : 'disabled' %>" href="<%= currentPage < totalPages ? `?page=${currentPage ? currentPage + 1 : 2}` : '/' %>">></a>
-  <a class="<%= currentPage === totalPages ? 'disabled' : '' %>" href="?page=<%= totalPages %>">>></a>
-  <div>
-    Goto Page: <input type="number" onkeydown="gotoKeydownHandler(event, '<%= totalPages %>')" />
+    <a class="<%= next ? '' : 'disabled' %>" href="<%= currentPage < totalPages ? `?page=${currentPage ? currentPage + 1 : 2}` : '/' %>">></a>
+    <a class="<%= currentPage === totalPages ? 'disabled' : '' %>" href="?page=<%= totalPages %>">>></a>
+    <div>
+      Goto Page: <input type="number" onkeydown="gotoKeydownHandler(event, '<%= totalPages %>')" />
+    </div>
   </div>
-</div>
+<% } %>

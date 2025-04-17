@@ -1,0 +1,30 @@
+<form method="GET" action="/">
+  <input
+    id="authorTitle"
+    type="text"
+    placeholder="Search book title or author's name"
+    value="<%= query.search || '' %>"
+    name="search"
+  />
+  <input
+    id="subjectBookshelf"
+    name="topic"
+    type="text"
+    placeholder="Search by subject or bookshelf"
+    value="<%= query.topic || '' %>"
+  />
+  <input
+    id="booksIds"
+    name="ids"
+    type="text"
+    placeholder="Search by book id(s)"
+    value="<%= query.ids || '' %>"
+  />
+  <input
+    id="copyright"
+    type="checkbox"
+    name="copyright"
+    <%= query.copyright === 'true' ? 'checked' : '' %>
+  />
+  <button type="submit">Search</button>
+</form>
