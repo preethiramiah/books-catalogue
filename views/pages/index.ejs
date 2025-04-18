@@ -1,9 +1,7 @@
 <%- include('../partials/header') %>
 <main>
   <%- include('../partials/search', { query }) %>
-  <% books?.forEach(book => { %>
-    <p><%= book.title %></p>
-  <% }) %>
+  <%- include('../partials/books', { books }) %>
   <%- include('../partials/pagination', { totalPages, count, next, previous, currentPage }) %>
 </main>
 <%- include('../partials/footer') %>

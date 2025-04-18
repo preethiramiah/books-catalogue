@@ -2,7 +2,7 @@
   <input
     id="authorTitle"
     type="text"
-    placeholder="Search book title or author's name"
+    placeholder="Search by book title or author's name"
     value="<%= query.search || '' %>"
     name="search"
   />
@@ -20,11 +20,16 @@
     placeholder="Search by book id(s)"
     value="<%= query.ids || '' %>"
   />
-  <input
-    id="copyright"
-    type="checkbox"
-    name="copyright"
-    <%= query.copyright === 'true' ? 'checked' : '' %>
-  />
+  <div class="form-elements">
+    <label for="copyright">Copyright</label>
+    <input
+      id="copyright"
+      type="checkbox"
+      name="copyright"
+      value="true"
+      <%= query.copyright === 'true' ? 'checked' : '' %>
+    />
+  </div>
   <button type="submit">Search</button>
 </form>
+<hr />

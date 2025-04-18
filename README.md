@@ -20,5 +20,6 @@ An index page that showcases a collection of books, allows browsing the collecti
 
 ## Acknowledgements
 
-- Project initialization - [How to use EJS to template your Node.js application](https://blog.logrocket.com/how-to-use-ejs-template-node-js-application/)
-- Assissted by [ChatGPT](https://chatgpt.com/) for proof reading commit messages and readme content.
+- Project initialization - [How to use EJS to template your Node.js application](https://blog.logrocket.com/how-to-use-ejs-template-node-js-application/).
+- MVC Pattern - [Building and structuring a Node.js MVC application](https://blog.logrocket.com/building-structuring-node-js-mvc-application/).
+- Assisted by [ChatGPT](https://chatgpt.com/) for proof reading commit messages and readme content. ChatGPT gave the page design as well.

@@ -1,0 +1,15 @@
+<% books?.forEach(book => { %>
+  <div class="book-container">
+    <div class="book-cover">
+      <img src="<%= book.formats?.["image/jpeg"] %>" alt="<%= book.title %>" />
+    </div>
+    <div class="book-details">
+      <h2 class="book-title"><%= book.id %> - <%= book.title %></h2>
+      <p><b>Author: </b><%= book.authors?.map(author => author.name)?.join(", ") %></p>
+      <p><b>Language: </b><%= book.languages.map(language => language === 'en' ? 'English' : language === 'fr' ? 'French' : '').join(", ") %></p>
+      <p><b>Subjects: </b><%= book.subjects?.join(", ") %></p>
+      <p><b>Bookshelves: </b><%= book.bookshelves?.join(", ") %></p>
+      <p><b>Copyright: </b><%= book.copyright ? "Yes" : "No" %></p>
+    </div>
+  </div>
+<% }) %>

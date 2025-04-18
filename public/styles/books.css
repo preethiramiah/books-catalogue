@@ -1,15 +1,153 @@
+html {
+  font-size: 16px;
+  --border-color: #ccc;
+  --text-color: #333;
+}
+
 body {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text-color);
+}
+
+hr {
+  margin-block-start: 1.5rem;
+  margin-block-end: 1.5rem;
+  border: 0.9px solid var(--border-color);
+  border-radius: 5px;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.form-elements {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+button {
+  border: 0 none;
+  border-radius: 8px;
+  background: linear-gradient(to bottom, darkblue, blue);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, blue, darkblue);
+}
+
+input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  padding: 0.75rem 1rem;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .pagination-container {
   display: flex;
-  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   flex-wrap: wrap;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.pagination-container a {
+  text-decoration: none;
+}
+
+.pagination-container a.current {
+  text-decoration: underline;
+  font-size: 1rem;
+}
+
+.goto-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.goto-container input {
+  max-width: 60px;
+  margin-left: 1rem;
 }
 
 a.disabled {
   pointer-events: none;
   cursor: default;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  box-sizing: border-box;
+  padding: 1rem 0;
+}
+
+.book-cover {
+  width: 100%;
+  text-align: center;
+}
+
+.book-cover img {
+  box-shadow: 5px 5px 5px 0 #666;
+}
+
+.book-details p {
+  font-size: 0.9rem;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  input[type="text"] {
+    width: 30%;
+  }
+
+  .book-cover {
+    width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    padding: 2rem;
+  }
+
+  input[type="text"] {
+    width: 20%;
+  }
+
+  button {
+    padding: 0.4rem 1.5rem;
+  }
+
+  .book-container {
+    flex-direction: row;
+    gap: 1rem;
+  }
 }
