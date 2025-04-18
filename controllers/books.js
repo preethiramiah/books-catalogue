@@ -16,6 +16,7 @@ async function renderBooksList (req, res) {
         previous,
         currentPage: currentPage || null,
         query: req.query,
+        queryString: `search=${req.query.search || ''}&topic=${req.query.topic || ''}&ids=${req.query.ids || ''}&copyright=${req.query.copyright || ''}`,
       }
     )
   } catch (error) {
