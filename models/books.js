@@ -22,4 +22,4 @@ async function getBooks (params) {
   return data
 }
 
-module.exports = { getBooks }
+module.exports = { getBooks, computeQueryParams }

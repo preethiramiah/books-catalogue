@@ -20,8 +20,8 @@ async function renderBooksList (req, res) {
       }
     )
   } catch (error) {
-    console.error('Error in renderBooksList: ', error.message)
-    res.status(500).send('Error in renderBooksList: ', error.message)
+    console.error('Error in renderBooksList:', error.message)
+    res.status(500).send(`Error in renderBooksList: ${error.message}`)
   }
 }
 
